@@ -5,11 +5,12 @@
   "repository": "https://github.com/ento/martian",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "lint": "gts lint",
     "clean": "gts clean",
-    "precompile": "ts-node scripts/languageMap.ts",
+    "precompile": "node --loader ts-node/esm --no-warnings=ExperimentalWarning scripts/languageMap.ts",
     "compile": "tsc",
     "fix": "gts fix",
     "prepare": "npm run compile",
@@ -42,7 +43,7 @@
     "jest": "^29.7.0",
     "linguist-languages": "^7.15.0",
     "ts-jest": "^29.2.6",
-    "ts-node": "^10.0.0",
+    "ts-node": "^10.9.0",
     "typescript": "^5.8.0"
   },
   "publishConfig": {

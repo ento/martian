@@ -1,7 +1,7 @@
-import {markdownToBlocks, markdownToRichText} from '../src';
-import * as notion from '../src/notion';
+import {markdownToBlocks, markdownToRichText} from '../src/index.js';
+import * as notion from '../src/notion/index.js';
 import fs from 'fs';
-import {LIMITS} from '../src/notion';
+import {LIMITS} from '../src/notion/index.js';
 
 describe('markdown converter', () => {
   describe('markdownToBlocks', () => {

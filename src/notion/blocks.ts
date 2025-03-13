@@ -1,5 +1,5 @@
-import {richText, supportedCodeLang} from './common';
-import {AppendBlockChildrenParameters} from '@notionhq/client/build/src/api-endpoints';
+import {richText, supportedCodeLang} from './common.js';
+import {AppendBlockChildrenParameters} from '@notionhq/client/build/src/api-endpoints.js';
 
 export type Block = AppendBlockChildrenParameters['children'][number];
 export type BlockWithoutChildren = Exclude<

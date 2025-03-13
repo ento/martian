@@ -1,8 +1,8 @@
-import {supportedCodeLang} from './common';
-import lm from './languageMap.json';
+import {supportedCodeLang} from './common.js';
+import lm from './languageMap.json' with { type: 'json' };
 
-export * from './blocks';
-export * from './common';
+export * from './blocks.js';
+export * from './common.js';
 
 export function parseCodeLanguage(
   lang?: string

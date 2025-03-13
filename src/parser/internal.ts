@@ -1,8 +1,8 @@
-import * as md from '../markdown';
-import * as notion from '../notion';
+import * as md from '../markdown/index.js';
+import * as notion from '../notion/index.js';
 import path from 'path';
 import {URL} from 'url';
-import {isSupportedCodeLang, LIMITS} from '../notion';
+import {isSupportedCodeLang, LIMITS} from '../notion/index.js';
 
 function ensureLength(text: string, copy?: object) {
   const chunks = text.match(/[^]{1,2000}/g) || [];

@@ -1,4 +1,4 @@
-import type {RichText} from './blocks';
+import type {RichText} from './blocks.js';
 
 /**
  * The limits that the Notion API uses for property values.

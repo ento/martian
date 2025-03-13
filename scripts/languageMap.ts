@@ -4,7 +4,11 @@
 import l, {Language} from 'linguist-languages';
 import fs from 'fs';
 import path from 'path';
-import {supportedCodeLang} from '../src/notion';
+import { fileURLToPath } from 'url';
+import {supportedCodeLang} from '../src/notion/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const languages: Record<
   supportedCodeLang,

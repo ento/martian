@@ -1,13 +1,13 @@
 import { unified } from 'unified';
 import markdown from 'remark-parse';
-import type * as notion from './notion';
+import type * as notion from './notion/index.js';
 import {
   BlocksOptions,
   parseBlocks,
   parseRichText,
   RichTextOptions,
-} from './parser/internal';
-import type * as md from './markdown';
+} from './parser/internal.js';
+import type * as md from './markdown/index.js';
 import remarkGemoji from 'remark-gemoji';
 import gfm from 'remark-gfm';
 import remarkMath from 'remark-math';
