@@ -8,6 +8,7 @@ import {
   RichTextOptions,
 } from './parser/internal';
 import type * as md from './markdown';
+import remarkGemoji from 'remark-gemoji';
 import gfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 
@@ -22,7 +23,8 @@ export function markdownToBlocks(
 
   options?: BlocksOptions
 ): notion.Block[] {
-  const root = unified().use(markdown).use(gfm).use(remarkMath).parse(body);
+  const parsed = unified().use(markdown).use(gfm).use(remarkMath).parse(body);
+  const root = unified().use(remarkGemoji).runSync(parsed);
   return parseBlocks(root as unknown as md.Root, options);
 }
 
@@ -37,6 +39,7 @@ export function markdownToRichText(
   text: string,
   options?: RichTextOptions
 ): notion.RichText[] {
-  const root = unified().use(markdown).use(gfm).parse(text);
+  const parsed = unified().use(markdown).use(gfm).parse(text);
+  const root = unified().use(remarkGemoji).runSync(parsed);
   return parseRichText(root as unknown as md.Root, options);
 }
