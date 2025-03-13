@@ -1,7 +1,7 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "lib": ["es2019"],
+    "lib": ["es2019", "dom"],
     "rootDir": ".",
     "outDir": "build",
     "strict": true,
@@ -10,5 +10,5 @@
     "declaration": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", "test/**/*.ts", "scripts/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.json", "test/**/*.ts", "scripts/**/*.ts"]
 }
